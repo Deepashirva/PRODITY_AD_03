@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:text="00:00:00"
+        android:layout_centerInParent="true"
+        tools:ignore="HardcodedText"/>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_below="@id/timerTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:onClick="startTimer"
+        tools:ignore="HardcodedText"/>
+
+    <Button
+        android:id="@+id/pauseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        android:layout_below="@id/timerTextView"
+        android:layout_toEndOf="@id/startButton"
+        android:layout_marginStart="16dp"
+        android:onClick="pauseTimer"
+        tools:ignore="HardcodedText"/>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_below="@id/timerTextView"
+        android:layout_toEndOf="@id/pauseButton"
+        android:layout_marginStart="16dp"
+        android:onClick="resetTimer"
+        tools:ignore="HardcodedText"/>
+
+</RelativeLayout>
